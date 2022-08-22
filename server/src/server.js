@@ -19,7 +19,7 @@ const server=http.createServer(app);
 
 async function startServer(){
     await mongoConnect()
-    // await loadLaunchData();
+    await loadLaunchData();
     await loadPlanetData();   
     server.listen(PORT,()=>{
         console.log(`Server is running on port ${PORT}`);
